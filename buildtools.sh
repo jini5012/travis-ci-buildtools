@@ -10,7 +10,7 @@ for version in ${args[@]}; do
 	lines=$(find $REPO_DIR -name "$version-*" | wc -l)
 
 	if [ $lines -eq 0 ]; then
-		echo "Downloding spigot-$version"
+		echo "Downloading spigot-$version"
 		java -jar ./BuildTools.jar --rev $version
 	else
 		echo "Skip downloading spigot-$version"
